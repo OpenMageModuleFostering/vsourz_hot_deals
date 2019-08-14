@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<package>
+    <name>Vsourz_Hot_Deals</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/MIT">Massachusetts Institute of Technology License (MITL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Hot Deals allows you to list your product in the deals section with attractive countdown timer.</summary>
+    <description>Product Deals:&#xD;
+&#xD;
+Create any number of deals using our Product Deals extension. It will provide you the ability to list your products with Special Prices in the Deals section. It will encourage customers to buy from the website and help enhance your sales.&#xD;
+&#xD;
+It will take 10 mins to setup the product deals on  your website. Follow these steps to have it setup.&#xD;
+&#xD;
+1) Download the extension from Magento Connect&#xD;
+2) Note the category Id for Product deals category&#xD;
+3) Do general setting for the extension from System &gt;&gt; Configuration&#xD;
+4) Add the Code Snippet given below to show the product deals on frontend.&#xD;
+&#xD;
+Features&#xD;
+=======&#xD;
+1. Categorized products deals&#xD;
+2. Slide and Listing layout&#xD;
+3. Show countdown - Flexible countdown timer(Days:Hours:Minutes:Seconds)&#xD;
+4. Shows discount percentage and discount amount on product listing page&#xD;
+5. Facility to limit number of products displayed&#xD;
+6. Responsive layout&#xD;
+7. Support all types of product (Simple, Virtual, Downloadable, Configurable, Grouped, Bundled)&#xD;
+8. Easy to install and easy to upgrade with no CORE code modifications&#xD;
+9. Easy to customize front-end via HTML/CSS&#xD;
+&#xD;
+How to use?&#xD;
+==============&#xD;
+&#xD;
+1) Install extension from Magento Connect&#xD;
+&#xD;
+2) Goto Catalog &gt;&gt; Manage Categories. You will see a category named Product Deals created. Copy the ID of the category.&#xD;
+&#xD;
+3) Go to : System-&gt; Configuration-&gt; Vsourz Deals-&gt; Product Deals and follow below steps&#xD;
+&#xD;
+**** General Setting&#xD;
+a. Load JQuery Library: Select YES if JQuery library in not included in your Magento Project&#xD;
+&#xD;
+b. Load OwlCarousel JS/CSS: If you have already included OwlCarousal then select "No" otherwise "Yes"&#xD;
+&#xD;
+c. Category Id: Insert the category Id of the product deals category.&#xD;
+&#xD;
+Please Note: This is a default category id. To list the products of particular category, you can override the default id from the code snippet given below.&#xD;
+&#xD;
+d. Product Per Row: Enter number of products you want to show in single row. Supports upto fours products per row&#xD;
+&#xD;
+4) Enter the Special Price, its Start date and End date to list the product in Deals section automatically.&#xD;
+&#xD;
+How to call the deal section on frontend?&#xD;
+&#xD;
+**** Shortcodes ****&#xD;
+You can use below code snippet to display deals products on frontend. Any number of categorised deals can be created on website.&#xD;
+&#xD;
+1) Use product_count to display limited number of products in this section product_count = 0 will display all products in that category&#xD;
+&#xD;
+2) To create separate deals based on the category, you will have to mention the category id in the code snippet while calling it.&#xD;
+Use parameter category_id = "CAT ID"&#xD;
+&#xD;
+1. Deals list layout&#xD;
+&#xD;
+Admin code: {{block type="vsourz_deals/deals" name="deals-products" template="vsourz/deals/deals.phtml" title="Hot Deals List"}}&#xD;
+&#xD;
+XML code: &lt; block type="vsourz_deals/deals" name="deals-products" template="vsourz/deals/deals.phtml" &gt; &lt; action method="setTitle"&gt;&lt; title&gt;Deals List&lt; /title&gt;&lt; /action&gt; &lt; action method="setCategoryId"&gt;&lt; category_id&gt;60&lt; /category_id&gt;&lt; /action&gt; &lt; /block&gt;&#xD;
+&#xD;
+PTHML code: echo $this-&gt;getLayout()-&gt;createBlock('vsourz_deals/deals')-&gt;setCategoryId('1')-&gt;setTitle('Hot Deals')-&gt;setTemplate('vsourz/deals/deals.phtml')-&gt;toHtml();&#xD;
+&#xD;
+2. Deals Slide Layout&#xD;
+&#xD;
+Admin code: {{block type="vsourz_deals/deals" name="deals-products" template="vsourz/deals/deals-slider.phtml" title="Hot Deals"}}&#xD;
+&#xD;
+XML code: &lt; block type="vsourz_deals/deals" name="deals-products" template="vsourz/deals/deals-slider.phtml" &gt; &lt; action method="setTitle"&gt;&lt; title&gt;Deals List&lt; /title&gt;&lt; /action&gt; &lt; action method="setCategoryId"&gt;&lt; category_id&gt;60&lt; /category_id&gt;&lt; /action&gt; &lt; /block&gt;&#xD;
+&#xD;
+PTHML code: echo $this-&gt;getLayout()-&gt;createBlock('vsourz_deals/deals')-&gt;setCategoryId('1')-&gt;setTitle('Hot Deals')-&gt;setTemplate('vsourz/deals/deals-slider.phtml')-&gt;toHtml();&#xD;
+&#xD;
+Please Note: In the XML code, we have intentionally placed space in the XML tags. Please remove the spaces while adding the code.&#xD;
+</description>
+    <notes>This is a First Release !!</notes>
+    <authors><author><name>Vsourz Digital</name><user>MAG002979323</user><email>mehul@vsourz.com</email></author></authors>
+    <date>2015-05-27</date>
+    <time>09:16:01</time>
+    <contents><target name="magecommunity"><dir name="Vsourz"><dir name="Deals"><dir name="Block"><file name="Deals.php" hash="afbe05405880194e6671a414c572983a"/></dir><dir name="Helper"><file name="Data.php" hash="52a9032e0f12bc3cd0eb87bb45b48478"/></dir><dir name="Model"><file name="Deals.php" hash="e25d636e58f9f58dc202827b64abfd75"/><dir name="Source"><file name="Truefalse.php" hash="32f870c3200a4dc0e2e931e1715ba5c3"/></dir></dir><dir name="data"><dir name="deals_setup"><file name="data-install-0.1.0.php" hash="50a8b87ec2ee54e543a3f0e6d30b7e8c"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="bead355fab11d2a2680fec3f5c751b5c"/><file name="config.xml" hash="4443cb52b911b409b0a8ce7213b4ef08"/><file name="system.xml" hash="ed490e725e2c944d2d90397bdbc05979"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Vsourz_Deals.xml" hash="da7a1c51758dee2f646e9f1cf8414309"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="deals.xml" hash="0e8a8a4ab3cdbee8f4f0e54a3b59b48c"/></dir><dir name="template"><dir name="vsourz"><dir name="deals"><file name="deals-slider.phtml" hash="23bc1f531e1c8e0eba64026bcf367a23"/><file name="deals.phtml" hash="61d94deef55fc93afaa53a4b6bd8995c"/></dir></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><dir name="deals"><file name="deals.css" hash="5b89047184bad153fa6eb189de489d7b"/><file name="owl.carousel.css" hash="d49fbfc6c0444e7c67b2ee7ae284a293"/><file name="owl.theme.css" hash="a361030c37b888ccf0bedb5cf308bfac"/><file name="owl.transitions.css" hash="b1bdaeac4065bf67a7d7a06213192964"/></dir></dir><dir name="js"><dir name="deals"><file name="jquery.countdown.min.js" hash="b18fc832a3544daa2df3304c7712b558"/><file name="jquery.plugin.min.js" hash="2548a741b69e479e2159819c2e9d24da"/><file name="owl.carousel.min.js" hash="8c52f27fcac36c7667f8fb846e1e94d5"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
