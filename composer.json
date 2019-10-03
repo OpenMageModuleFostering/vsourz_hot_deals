@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Vsourz_Hot_Deals",
+    "name": "OpenMageModuleFostering\/Vsourz_Hot_Deals",
     "type": "magento-module",
     "license": "Massachusetts-Institute-of-Technology-License-(MITL)",
     "homepage": "",
     "description": "Hot Deals allows you to list your product in the deals section with attractive countdown timer.",
     "authors": [
-    {
-        "name": "Vsourz Digital",
-        "email": "mehul@vsourz.com"
-    }
-],
+        {
+            "name": "Vsourz Digital",
+            "email": "mehul@vsourz.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
